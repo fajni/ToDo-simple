@@ -16,5 +16,11 @@ namespace PresentationLayer
         {
             InitializeComponent();
         }
+
+        private void lbl_BackToLogin_Click(object sender, EventArgs e)
+        {
+            new LoginForm().Show();
+            this.Hide();
+        }
     }
 }
