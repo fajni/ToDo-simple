@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using BusinessLayer;
+using Shared.Models;
+using System;
 using System.Windows.Forms;
 
 namespace PresentationLayer
@@ -16,7 +15,13 @@ namespace PresentationLayer
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginForm());
+            //Application.Run(new LoginForm());
+
+            UserBusiness userBusiness = new UserBusiness();
+            foreach(var user in userBusiness.GetAllUsers())
+            {
+                Console.WriteLine(user.ToString());
+            }
         }
     }
 }
