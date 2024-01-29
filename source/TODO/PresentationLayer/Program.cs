@@ -19,13 +19,7 @@ namespace PresentationLayer
 
             UserBusiness userBusiness = new UserBusiness();
 
-            User user = new User("Test", "Testing", "Test123");
-            userBusiness.InsertUser(user);
-
-            foreach(var u in userBusiness.GetAllUsers())
-            {
-                Console.WriteLine(u.ToString());
-            }
+            Console.WriteLine(userBusiness.GetUserById(1));
         }
     }
 }
