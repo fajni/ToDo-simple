@@ -6,5 +6,6 @@ namespace Shared.Interfaces
     public interface IUserRepository
     {
         List<User> GetAllUsers();
+        int InsertUser(User user);
     }
 }

@@ -32,5 +32,22 @@ namespace RepositoryLayer
             }
             return users;
         }
+
+        public int InsertUser(User user)
+        {
+            using(SqlConnection sqlConnection = new SqlConnection( Constants.connectionString))
+            {
+                sqlConnection.Open();
+
+                SqlCommand sqlCommand = new SqlCommand
+                {
+                    Connection = sqlConnection,
+                    CommandText = string.Format("INSERT INTO Users(name, lastname, password) VALUES('{0}', '{1}', '{2}')",
+                        user.GetSetName, user.GetSetLastname, user.GetSetPassword)
+                };
+
+                return sqlCommand.ExecuteNonQuery();
+            }
+        }
     }
 }

@@ -17,5 +17,10 @@ namespace BusinessLayer
         {
             return userRepository.GetAllUsers();
         }
+
+        public int InsertUser(User user)
+        {
+            return userRepository.InsertUser(user);
+        }
     }
 }

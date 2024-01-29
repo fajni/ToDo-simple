@@ -18,9 +18,13 @@ namespace PresentationLayer
             //Application.Run(new LoginForm());
 
             UserBusiness userBusiness = new UserBusiness();
-            foreach(var user in userBusiness.GetAllUsers())
+
+            User user = new User("Test", "Testing", "Test123");
+            userBusiness.InsertUser(user);
+
+            foreach(var u in userBusiness.GetAllUsers())
             {
-                Console.WriteLine(user.ToString());
+                Console.WriteLine(u.ToString());
             }
         }
     }
