@@ -30,9 +30,22 @@ namespace BusinessLayer
             return null;
         }
 
-        public int InsertUser(User user)
+        public bool InsertUser(User user)
         {
-            return userRepository.InsertUser(user);
+            if(this.userRepository.InsertUser(user) > 0) 
+            {
+                return true;
+            }
+            else { return false; };
+        }
+
+        public bool DeleteUser(int user_id)
+        {
+            if(this.userRepository.DeleteUser(user_id) > 0)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }

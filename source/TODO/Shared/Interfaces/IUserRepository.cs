@@ -7,5 +7,6 @@ namespace Shared.Interfaces
     {
         List<User> GetAllUsers();
         int InsertUser(User user);
+        int DeleteUser(int user_id);
     }
 }

@@ -49,5 +49,21 @@ namespace RepositoryLayer
                 return sqlCommand.ExecuteNonQuery();
             }
         }
+
+        public int DeleteUser(int user_id)
+        {
+            using (SqlConnection sqlConnection = new SqlConnection(Constants.connectionString))
+            {
+                sqlConnection.Open();
+
+                SqlCommand sqlCommand = new SqlCommand
+                {
+                    Connection = sqlConnection,
+                    CommandText = string.Format("DELETE FROM Users WHERE user_id={0}", user_id)
+                };
+
+                return sqlCommand.ExecuteNonQuery();
+            }
+        }
     }
 }
