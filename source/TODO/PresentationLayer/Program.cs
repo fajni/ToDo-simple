@@ -19,7 +19,24 @@ namespace PresentationLayer
 
             UserBusiness userBusiness = new UserBusiness();
 
-            Console.WriteLine(userBusiness.DeleteUser(1002));
+            User newUser = null;
+
+            foreach(var user in userBusiness.GetAllUsers())
+            {
+                if(user.GetSetUserId == 2)
+                {
+                    newUser = user;
+                }
+            }
+
+            Console.WriteLine("New user to Update: "+newUser.ToString());
+
+            //newUser.GetSetUserId = 2;
+            newUser.GetSetName = "Veljko";
+            newUser.GetSetLastname = "Fajni";
+            newUser.GetSetPassword = "veljko123";
+
+            Console.WriteLine(userBusiness.UpdateUser(newUser));
 
             foreach(var user in userBusiness.GetAllUsers())
             {

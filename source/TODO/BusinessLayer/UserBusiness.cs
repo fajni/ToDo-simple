@@ -47,5 +47,14 @@ namespace BusinessLayer
             }
             return false;
         }
+
+        public bool UpdateUser(User user)
+        {
+            if(this.userRepository.UpdateUser(user) > 0)
+            {
+                return true;
+            }
+            return false;
+        }
     }
 }
