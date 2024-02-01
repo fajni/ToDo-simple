@@ -92,6 +92,7 @@
             this.txt_Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Password.Location = new System.Drawing.Point(115, 376);
             this.txt_Password.Name = "txt_Password";
+            this.txt_Password.PasswordChar = '*';
             this.txt_Password.Size = new System.Drawing.Size(331, 29);
             this.txt_Password.TabIndex = 8;
             // 
@@ -131,7 +132,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(443, 68);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Fill All FIelds To Register";
+            this.label1.Text = "CREATE ACCOUNT";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
@@ -140,7 +141,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(3, 248);
+            this.label2.Location = new System.Drawing.Point(3, 241);
+            this.label2.Margin = new System.Windows.Forms.Padding(3, 0, 3, 7);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(106, 24);
             this.label2.TabIndex = 3;
@@ -153,7 +155,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(3, 316);
+            this.label3.Location = new System.Drawing.Point(3, 309);
+            this.label3.Margin = new System.Windows.Forms.Padding(3, 0, 3, 7);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(106, 24);
             this.label3.TabIndex = 4;
@@ -166,7 +169,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(3, 384);
+            this.label4.Location = new System.Drawing.Point(3, 377);
+            this.label4.Margin = new System.Windows.Forms.Padding(3, 0, 3, 7);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(106, 24);
             this.label4.TabIndex = 5;
@@ -188,6 +192,7 @@
             // 
             this.checkBox_ShowPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBox_ShowPassword.AutoSize = true;
+            this.checkBox_ShowPassword.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.tableLayoutPanel2.SetColumnSpan(this.checkBox_ShowPassword, 2);
             this.checkBox_ShowPassword.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkBox_ShowPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -197,7 +202,8 @@
             this.checkBox_ShowPassword.TabIndex = 9;
             this.checkBox_ShowPassword.Text = "Show Password";
             this.checkBox_ShowPassword.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.checkBox_ShowPassword.UseVisualStyleBackColor = true;
+            this.checkBox_ShowPassword.UseVisualStyleBackColor = false;
+            this.checkBox_ShowPassword.CheckedChanged += new System.EventHandler(this.checkBox_ShowPassword_CheckedChanged);
             // 
             // lbl_BackToLogin
             // 
@@ -243,6 +249,7 @@
             this.btn_Register.TabIndex = 10;
             this.btn_Register.Text = "REGISTER";
             this.btn_Register.UseVisualStyleBackColor = false;
+            this.btn_Register.Click += new System.EventHandler(this.btn_Register_Click);
             // 
             // txt_ConfirmPassword
             // 
@@ -252,6 +259,7 @@
             this.txt_ConfirmPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_ConfirmPassword.Location = new System.Drawing.Point(115, 444);
             this.txt_ConfirmPassword.Name = "txt_ConfirmPassword";
+            this.txt_ConfirmPassword.PasswordChar = '*';
             this.txt_ConfirmPassword.Size = new System.Drawing.Size(331, 29);
             this.txt_ConfirmPassword.TabIndex = 13;
             // 
@@ -272,12 +280,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(449, 682);
             this.Controls.Add(this.tableLayoutPanel2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.MinimumSize = new System.Drawing.Size(465, 430);
             this.Name = "RegistrationForm";
             this.Text = "Registration";
+            this.Load += new System.EventHandler(this.RegistrationForm_Load);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

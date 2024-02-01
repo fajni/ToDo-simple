@@ -1,19 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using BusinessLayer;
+using Shared.Models;
+using System;
 using System.Windows.Forms;
 
 namespace PresentationLayer
 {
     public partial class LoginForm : Form
     {
+        public UserBusiness userBusiness;
+
         public LoginForm()
         {
+            userBusiness = new UserBusiness();
             InitializeComponent();
         }
 
@@ -35,6 +33,43 @@ namespace PresentationLayer
         {
             new RegistrationForm().Show();
             this.Hide();
+        }
+
+        
+        private void checkBox_ShowPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            if(checkBox_ShowPassword.Checked)
+            {
+                txt_Password.PasswordChar = '\0';
+            }
+            else
+            {
+                txt_Password.PasswordChar = '*';
+            }
+        }
+        
+
+        private void btn_Login_Click(object sender, EventArgs e)
+        {
+            if(txt_Name.Text == "" || txt_Lastname.Text == "" || txt_Password.Text == "")
+            {
+                MessageBox.Show("Empty Fields Are Not Allowed!", "Login Failed!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            foreach(User user in userBusiness.GetAllUsers())
+            {
+                if (user.GetSetName == txt_Name.Text && user.GetSetLastname == txt_Lastname.Text && user.GetSetPassword.Trim() == txt_Password.Text.Trim())
+                {
+                    ClearFields();
+                    new ObligationsForm().Show();
+                    MessageBox.Show("Login Successfull!", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Hide();
+                    return;
+                }
+            }
+
+            MessageBox.Show("Invalid Username or Password!", "Login Failed!", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }

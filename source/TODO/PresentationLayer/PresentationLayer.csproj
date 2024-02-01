@@ -112,6 +112,10 @@
       <Project>{A7887F65-A297-4DE6-9668-D7436F58EAC6}</Project>
       <Name>BusinessLayer</Name>
     </ProjectReference>
+    <ProjectReference Include="..\RepositoryLayer\RepositoryLayer.csproj">
+      <Project>{0AA56DF9-9D90-471D-A845-9A7434797F47}</Project>
+      <Name>RepositoryLayer</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Shared\Shared.csproj">
       <Project>{A0890D23-E17B-4D53-829D-7AD9EBE1CDC0}</Project>
       <Name>Shared</Name>

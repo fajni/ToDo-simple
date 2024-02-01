@@ -87,6 +87,7 @@
             this.txt_Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Password.Location = new System.Drawing.Point(115, 354);
             this.txt_Password.Name = "txt_Password";
+            this.txt_Password.PasswordChar = '*';
             this.txt_Password.Size = new System.Drawing.Size(331, 29);
             this.txt_Password.TabIndex = 8;
             // 
@@ -135,7 +136,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(3, 222);
+            this.label2.Location = new System.Drawing.Point(3, 215);
+            this.label2.Margin = new System.Windows.Forms.Padding(3, 0, 3, 7);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(106, 24);
             this.label2.TabIndex = 3;
@@ -148,7 +150,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(3, 292);
+            this.label3.Location = new System.Drawing.Point(3, 285);
+            this.label3.Margin = new System.Windows.Forms.Padding(3, 0, 3, 7);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(106, 24);
             this.label3.TabIndex = 4;
@@ -161,7 +164,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(3, 362);
+            this.label4.Location = new System.Drawing.Point(3, 355);
+            this.label4.Margin = new System.Windows.Forms.Padding(3, 0, 3, 7);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(106, 24);
             this.label4.TabIndex = 5;
@@ -193,6 +197,7 @@
             this.checkBox_ShowPassword.Text = "Show Password";
             this.checkBox_ShowPassword.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.checkBox_ShowPassword.UseVisualStyleBackColor = true;
+            this.checkBox_ShowPassword.CheckedChanged += new System.EventHandler(this.checkBox_ShowPassword_CheckedChanged);
             // 
             // btn_Login
             // 
@@ -209,6 +214,7 @@
             this.btn_Login.TabIndex = 10;
             this.btn_Login.Text = "LOGIN";
             this.btn_Login.UseVisualStyleBackColor = false;
+            this.btn_Login.Click += new System.EventHandler(this.btn_Login_Click);
             // 
             // label5
             // 
@@ -243,7 +249,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(469, 659);
             this.Controls.Add(this.tableLayoutPanel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
@@ -268,12 +274,12 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txt_Name;
-        private System.Windows.Forms.TextBox txt_Password;
         private System.Windows.Forms.TextBox txt_Lastname;
         private System.Windows.Forms.CheckBox checkBox_ShowPassword;
         private System.Windows.Forms.Button btn_Login;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lbl_Login;
+        private System.Windows.Forms.TextBox txt_Password;
     }
 }
 

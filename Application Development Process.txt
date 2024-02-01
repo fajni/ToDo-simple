@@ -4,8 +4,8 @@
 	Read User By user_id
 3.	Insert User Into Database //01.29.2024 = DONE
 4.	Delete User From Database //01.30.2024 = DONE
-5.	Update User //01.31.2024
-6.	Login & Registration Form Functionality //02.01.2024
+5.	Update User //01.31.2024 = DONE
+6.	Login & Registration Form Functionality //02.01.2024 = DONE
 7.	User Form Design //02.02.2024
 8.	User Form Functionality //02.03.2024
 
