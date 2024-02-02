@@ -1,3 +1,8 @@
 .NET Framework 4.8
 
+# Testing
 NuGet Package Manager: Moq
+
+# Database
+ADO.NET
+LocalDB, SQL Server

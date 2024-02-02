@@ -62,7 +62,9 @@ namespace PresentationLayer
                 if (user.GetSetName == txt_Name.Text && user.GetSetLastname == txt_Lastname.Text && user.GetSetPassword.Trim() == txt_Password.Text.Trim())
                 {
                     ClearFields();
-                    new ObligationsForm().Show();
+                    //new ObligationsForm().Show();
+                    //new UserForm(user).Show();
+                    new MainForm(user).Show();
                     MessageBox.Show("Login Successfull!", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Hide();
                     return;
