@@ -16,13 +16,11 @@ namespace PresentationLayer
 
         private void UserForm_Load(object sender, EventArgs e)
         {
-            lbl_NameLastname.Text = user.GetSetName + " "+user.GetSetLastname;
-            lbl_Id.Text = user.GetSetUserId.ToString();
         }
 
         private void lbl_Logout_Click(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

@@ -59,7 +59,7 @@ namespace PresentationLayer
 
             foreach(User user in userBusiness.GetAllUsers())
             {
-                if (user.GetSetName == txt_Name.Text && user.GetSetLastname == txt_Lastname.Text && user.GetSetPassword.Trim() == txt_Password.Text.Trim())
+                if (user.GetSetName == txt_Name.Text && user.GetSetLastname == txt_Lastname.Text && user.GetSetPassword == txt_Password.Text)
                 {
                     ClearFields();
                     //new ObligationsForm().Show();
