@@ -82,7 +82,7 @@ namespace PresentationLayer
 
             User newUser = new User(name, lastname, password);
             userBusiness.InsertUser(newUser);
-            MessageBox.Show("Added new \""+name+" "+lastname+"\" user");
+            MessageBox.Show("Added new \""+name+" "+lastname+"\" user", "Registration Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
             new LoginForm().Show();
             this.Hide();
         }
