@@ -23,5 +23,10 @@ namespace PresentationLayer
             new UserForm(user).Show();
             //this.Hide();
         }
+
+        private void btn_Obligations_Click(object sender, EventArgs e)
+        {
+            new ObligationsForm().Show();
+        }
     }
 }

@@ -76,6 +76,7 @@
             this.btn_Obligations.TabIndex = 1;
             this.btn_Obligations.Text = "Obligations";
             this.btn_Obligations.UseVisualStyleBackColor = true;
+            this.btn_Obligations.Click += new System.EventHandler(this.btn_Obligations_Click);
             // 
             // MainForm
             // 

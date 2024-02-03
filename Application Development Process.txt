@@ -10,7 +10,7 @@
 8.	User Form Functionality //02.03.2024 = DONE
 
 	/*	SPRING 2	*/
-9.	Obligations Form Design //02.04.2024
+9.	Obligations Form Design //02.04.2024 = DONE
 10.	Read Obligations From Database 
 	Read Obligations By User ID //02.05.2024
 11.	Insert Obligation Into Database //02.06.2024
@@ -24,6 +24,6 @@
 
 17.	Encrypted User password = MAYBE
 
-18.	Documentation //02.12.2024
+18.	Summary //02.12.2024
 
-19. 	Summary //02.13.2024
+19. 	Documentation //02.13.2024
