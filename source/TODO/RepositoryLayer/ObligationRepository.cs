@@ -35,5 +35,22 @@ namespace RepositoryLayer
 
             return obligations;
         }
+
+        public int InsertObligation(Obligation obligation)
+        {
+            using(SqlConnection sqlConnection = new SqlConnection( Constants.connectionString))
+            {
+                sqlConnection.Open();
+
+                SqlCommand sqlCommand = new SqlCommand
+                {
+                    Connection = sqlConnection,
+                    CommandText = string.Format("INSERT INTO Obligations(title, date, note, user_id) VALUES('{0}', '{1}', '{2}', {3})", 
+                        obligation.GetSetTitle, obligation.GetSetDate.ToString("MM-dd-yyyy"), obligation.GetSetNote, obligation.GetSetUserId)
+                };
+
+                return sqlCommand.ExecuteNonQuery();
+            }
+        }
     }
 }

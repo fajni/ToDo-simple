@@ -38,5 +38,17 @@ namespace BusinessLayer
 
             return obligations;
         }
+    
+        public bool InsertObligation(Obligation obligation)
+        {
+            if(this.obligationRepository.InsertObligation(obligation) > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

@@ -6,5 +6,6 @@ namespace Shared.Interfaces
     public interface IObligationRepository
     {
         List<Obligation> GetAllObligations();
+        int InsertObligation(Obligation obligation);
     }
 }
