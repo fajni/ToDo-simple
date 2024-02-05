@@ -6,3 +6,11 @@ NuGet Package Manager: Moq
 # Database
 ADO.NET
 LocalDB, SQL Server
+
+ Creating the application: Windows Forms App (.NET Framework) //4.8
+ Connection with database: View - Sql Server Object Explorer
+ Adding new layer: Solutin - Class Library (.NET Framework)
+ using new layer: Select the layer - Add - Reference ... Project
+ How to find connection string: Properties on database - Connection String - delete all after TrustServer
+ Start the application: Solution - Properties - Startup Project: Current selection
+ Tests: Unit Test Project (.NET Framework)

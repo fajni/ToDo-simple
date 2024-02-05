@@ -2,7 +2,6 @@
 using Shared.Models;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Net.Sockets;
 
 namespace RepositoryLayer
 {

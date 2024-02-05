@@ -12,7 +12,7 @@
 	/*	SPRING 2	*/
 9.	Obligations Form Design //02.04.2024 = DONE
 10.	Read Obligations From Database 
-	Read Obligations By User ID //02.05.2024
+	Read Obligations By User ID //02.05.2024 = DONE
 11.	Insert Obligation Into Database //02.06.2024
 12.	Delete Obligation From Database //02.07.2024
 13. 	Update Obligation //02.08.2024
