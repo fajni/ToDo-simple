@@ -50,5 +50,12 @@ namespace BusinessLayer
                 return false;
             }
         }
+
+        public bool DeleteObligation(int id)
+        {
+            if(obligationRepository.DeleteObligation(id) > 0)
+                return true;
+            return false;
+        }
     }
 }

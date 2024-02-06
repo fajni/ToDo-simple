@@ -7,5 +7,6 @@ namespace Shared.Interfaces
     {
         List<Obligation> GetAllObligations();
         int InsertObligation(Obligation obligation);
+        int DeleteObligation(int id);
     }
 }

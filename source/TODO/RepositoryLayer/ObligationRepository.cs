@@ -52,5 +52,21 @@ namespace RepositoryLayer
                 return sqlCommand.ExecuteNonQuery();
             }
         }
+    
+        public int DeleteObligation(int id)
+        {
+            using (SqlConnection sqlConnection = new SqlConnection(Constants.connectionString))
+            {
+                sqlConnection.Open();
+
+                SqlCommand sqlCommand = new SqlCommand
+                {
+                    Connection = sqlConnection,
+                    CommandText = string.Format("DELETE FROM Obligations WHERE id={0}", id)
+                };
+
+                return sqlCommand.ExecuteNonQuery();
+            }
+        }
     }
 }

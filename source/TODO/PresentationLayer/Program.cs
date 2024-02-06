@@ -20,33 +20,26 @@ namespace PresentationLayer
             UserBusiness userBusiness = new UserBusiness();
             ObligationBusiness obligationBusiness = new ObligationBusiness();
 
-            foreach(var user in userBusiness.GetAllUsers())
+            Obligation newObligation = new Obligation
             {
-                Console.WriteLine(user.ToString());
-            }
+                GetSetUserId = 1,
+                GetSetTitle = "Delete",
+                GetSetDate = DateTime.Now,
+                GetSetNote = "Obligation to delete!"
+            };
+
+            obligationBusiness.InsertObligation(newObligation);
 
             foreach(var obligation in obligationBusiness.GetAllObligations())
             {
                 Console.WriteLine(obligation.ToString());
             }
 
-            Obligation newObligation1 = new Obligation 
+            foreach (var obligation in obligationBusiness.GetAllObligations())
             {
-                GetSetUserId = 1,
-                GetSetTitle = "First Insert",
-                GetSetDate = DateTime.Parse("30-Jan-2024"),
-                GetSetNote = "Note For First New Obligation"
-            };
-
-            Obligation newObligation2 = new Obligation
-            {
-                GetSetUserId = 1,
-                GetSetTitle = "Second Insert",
-                GetSetDate = Convert.ToDateTime("28-Feb-2024")
-            };
-
-            Console.WriteLine(obligationBusiness.InsertObligation(newObligation1));
-            Console.WriteLine(obligationBusiness.InsertObligation(newObligation2));
+                if(obligation.GetSetTitle.Contains("Delete"))
+                    Console.WriteLine(obligationBusiness.DeleteObligation(obligation.GetSetId));
+            }
 
             foreach (var obligation in obligationBusiness.GetAllObligations())
             {
