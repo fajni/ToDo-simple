@@ -68,5 +68,19 @@ namespace RepositoryLayer
                 return sqlCommand.ExecuteNonQuery();
             }
         }
+
+        public int UpdateObligation(Obligation obligation)
+        {
+            using (SqlConnection sqlConnection = new SqlConnection(Constants.connectionString))
+            {
+                sqlConnection.Open();
+                SqlCommand sqlCommand = new SqlCommand();
+                sqlCommand.Connection = sqlConnection;
+                sqlCommand.CommandText = string.Format("UPDATE Obligations SET title = '{0}', date = '{1}', note = '{2}' WHERE id = {3}",
+                    obligation.GetSetTitle, obligation.GetSetDate, obligation.GetSetNote, obligation.GetSetId);
+
+                return sqlCommand.ExecuteNonQuery();
+            }
+        }
     }
 }

@@ -57,5 +57,14 @@ namespace BusinessLayer
                 return true;
             return false;
         }
+
+        public bool UpdateObligation(Obligation obligation)
+        {
+            if(obligationRepository.UpdateObligation(obligation) > 0)
+            {
+                return true;
+            }
+            return false;
+        }
     }
 }
