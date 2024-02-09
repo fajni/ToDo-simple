@@ -26,7 +26,12 @@ namespace PresentationLayer
 
         private void btn_Obligations_Click(object sender, EventArgs e)
         {
-            new ObligationsForm().Show();
+            new ObligationsForm(user).Show();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
