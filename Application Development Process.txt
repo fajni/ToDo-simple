@@ -20,7 +20,7 @@
 
 	/*	SPRING 3	*/
 15.	Tests For Users //02.10.2024 = DONE
-16.	Tests For Obligations //02.11.2024
+16.	Tests For Obligations //02.11.2024 = DONE
 
 17.	Encrypted User password = MAYBE
 
