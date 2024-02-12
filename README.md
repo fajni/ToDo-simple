@@ -1,5 +1,13 @@
-# ToDo-simple
-Simple CRUD ToDo Application Made In .NET Framework Using Windows Forms. Main Idea Is To Track Obligations.
+# 📝 ToDo-simple
+
+Simple three-layered CRUD ToDo Application Made In .NET 4.8 Framework Using Windows Forms. Main Idea Is To Track User's Obligations/Tasks. Every Obligation Is Bind To a Specific User.
+
+## Technologies and tools
+
+- .NET Framework 4.8
+- Windows Forms
+- LocalDB, ADO.NET
+- Unit tests
 
 ## Project Structure
 
@@ -33,5 +41,30 @@ Simple CRUD ToDo Application Made In .NET Framework Using Windows Forms. Main Id
 │
 ├── ER					# Contains ER diagrams.
 │   └── entity-relationship diagram.png
+│
 └── README.md                   	# Project documentation (you are here!)
 ```
+
+## Demo images
+
+<details>
+<p align = "center">
+<img alt = "LOGIN" src="images/LOGIN.PNG" height = "50%" width="50%">
+<br/>
+<img alt = "REGISTER" src="images/REGISTER.PNG" height = "50%" width="50%">
+<br/>
+<img alt = "ACCOUNT" src="images/ACCOUNT.PNG" height = "50%" width="50%">
+<br/>
+<img alt = "OBLIGATIONS" src="images/OBLIGATIONS.PNG" height = "50%" width="50%">
+</p>
+</details>
+
+## Project build & My Notes
+
+-  Creating the application: Windows Forms App (.NET Framework)
+- Connection with database: View - Sql Server Object Explorer
+- Adding new layer: Solutin - Class Library (.NET Framework)
+- using new layer: Select the layer - Add - Reference ... Project
+- How to find connection string: Properties on database - Connection String - delete all after TrustServer
+- Start the application: Solution - Properties - Startup Project: Current selection
+- Tests: Unit Test Project (.NET Framework)
